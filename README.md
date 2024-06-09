@@ -37,7 +37,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-If you have any questions or want to reach out for collaboration, please contact me at [your-email@example.com](mailto:wTristaaaaan@gmail.com).
+If you have any questions or want to reach out for collaboration, please contact me at [wTristaaaaan@gmail.com](mailto:wTristaaaaan@gmail.com).
 
 ---
 

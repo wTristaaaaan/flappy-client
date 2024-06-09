@@ -736,7 +736,33 @@
               },
               "parameters": [
                 "",
-                "\"ws:127.0.0.1:8000/connexion\"",
+                "\"ws://127.0.0.1:8000/connection\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "WebSocketClient::IsConnected"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "WebSocketClient::Send"
+              },
+              "parameters": [
+                "",
+                "username",
                 ""
               ]
             }
