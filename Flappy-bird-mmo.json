@@ -697,6 +697,38 @@
           "actions": [
             {
               "type": {
+                "value": "WebSocketClient::Connect"
+              },
+              "parameters": [
+                "",
+                "\"ws://127.0.0.1:8000/connection\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "WebSocketClient::IsConnected"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -732,37 +764,11 @@
             },
             {
               "type": {
-                "value": "WebSocketClient::Connect"
-              },
-              "parameters": [
-                "",
-                "\"ws://127.0.0.1:8000/connection\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "WebSocketClient::IsConnected"
-              },
-              "parameters": [
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
                 "value": "WebSocketClient::Send"
               },
               "parameters": [
                 "",
-                "username",
+                "\"{'action': 'connection', 'username': '\"+ username +\"'}\"",
                 ""
               ]
             }
