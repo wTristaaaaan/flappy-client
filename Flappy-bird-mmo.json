@@ -628,7 +628,26 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "userInfo",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "gameId",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "id",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ],
       "instances": [],
       "objects": [
         {
@@ -829,6 +848,12 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -873,7 +898,7 @@
               },
               "parameters": [
                 "serverInfo.Text::Value()",
-                ""
+                "userInfo"
               ]
             }
           ]
